@@ -1,0 +1,5 @@
+variables:
+  catalog_name:
+    default: BigMart
+  data_source:
+    default: sales

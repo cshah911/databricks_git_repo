@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_git_demo:
+      name: git_demo
+      libraries:
+        - glob:
+            include: ../../src/pipeline/git_demo's/transformations/**
+      schema: default
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: ${var.catalog_name}
+      serverless: true
+      root_path: ../../src/pipeline/git_demo's
