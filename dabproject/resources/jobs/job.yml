@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    Injestion_Sales_job:
+      name: Injestion Sales job
+      tasks:
+        - task_key: ingestion
+          notebook_task:
+            notebook_path: ../../src/notebooks/ingestion
+            base_parameters:
+              catalog_name: ${var.catalog_name}
+              data_source: ${var.data_source}
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
